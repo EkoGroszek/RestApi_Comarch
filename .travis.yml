@@ -7,3 +7,6 @@ dist: trusty
 stages:
   -compile
   -test
+
+script:
+    - ant test
