@@ -1,11 +1,13 @@
 package com.example.demo.entities;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @NoArgsConstructor
@@ -17,11 +19,19 @@ public class Transfer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @OneToOne
-    private Account sendingAccount;
+    private String sendingAccountNumber;
 
-    @OneToOne
-    private Account targetAccount;
+    private BigDecimal amount;
 
-    private Date dateOfSendingTransfer;
+    private String targetAccountNumber;
+
+    private LocalDateTime dateOfSendingTransfer;
+
+    private LocalDateTime dateOfPostingTransfer;
+
+    private String status;
+
+    public enum status {
+        PENDING, COMPLETED
+    }
 }
