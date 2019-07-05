@@ -19,6 +19,8 @@ public class TransferServiceImpl {
 //    private AccountRepository accountRepository;
     private AccountServiceImpl accountService;
 
+    private int elop;
+
     public TransferServiceImpl(){
 
     }
