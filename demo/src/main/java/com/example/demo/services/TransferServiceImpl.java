@@ -19,7 +19,7 @@ public class TransferServiceImpl {
 //    private AccountRepository accountRepository;
     private AccountServiceImpl accountService;
 
-    private int elop;
+    private int elops;
 
     public TransferServiceImpl(){
 
