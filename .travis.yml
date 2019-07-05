@@ -4,9 +4,4 @@ jdk:
 sudo: true
 install: true
 dist: trusty
-stages:
-  -compile
-  -test
 
-script:
-    - ant test
