@@ -1,4 +1,11 @@
 language: java
-
+jdk:
+  - oraclejdk8
+sudo: true
+install: true
+dist: trusty
+stages:
+  -compile
+  -test
 before_install:
   -chmod = +x mvnw
